@@ -1,13 +1,5 @@
 <?php
-$host = "localhost";
-$db   = "wow";
-$user = "root";
-$pass = "";
-
-$con = mysqli_connect($host, $user, $pass, $db);
-if (mysqli_connect_errno()) { echo "Failed to connect to MySQL: " . mysqli_connect_error(); }
-mysqli_query($con,"SET NAMES utf8");
-mysqli_query($con,"SET CHARACTER_SET utf8");
+include("config.php");
 
 $sql="SELECT id,arquivo FROM boss";
 $result=mysqli_query($con,$sql);
